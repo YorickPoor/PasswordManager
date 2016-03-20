@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Password generator</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QComboBox" name="cbb">
+     <item>
+      <property name="text">
+       <string>Сложность пароля</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Очень сложный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Средний пароль</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Простой пароль</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="pwd"/>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="prBar">
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="generate">
+     <property name="text">
+      <string>Сгенерировать</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="copy">
+     <property name="text">
+      <string>Копировать</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

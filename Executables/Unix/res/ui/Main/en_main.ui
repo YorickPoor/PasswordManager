@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>664</width>
+    <height>479</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Password Manager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/Title_icon/main.png</normaloff>:/Title_icon/main.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTreeWidget" name="GroupView">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <column>
+       <property name="text">
+        <string>Groups</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTreeWidget" name="DataView">
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <column>
+       <property name="text">
+        <string>№</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <kerning>false</kerning>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Addres</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>664</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFiles">
+    <property name="title">
+     <string>Files</string>
+    </property>
+    <widget class="QMenu" name="menuWindow_blocking">
+     <property name="title">
+      <string>Window blocking</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/Main_menu_icons/block.png</normaloff>:/Main_menu_icons/block.png</iconset>
+     </property>
+     <addaction name="actionBlock_this_window"/>
+    </widget>
+    <addaction name="actionCreate_database"/>
+    <addaction name="actionOpen_database"/>
+    <addaction name="actionSave_database"/>
+    <addaction name="actionSave_database_as"/>
+    <addaction name="actionClose_database"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="menuWindow_blocking"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuData">
+    <property name="title">
+     <string>Data</string>
+    </property>
+    <addaction name="actionAdd_data_to_base"/>
+    <addaction name="actionView_Edit_data_on_base"/>
+    <addaction name="actionDelete_data"/>
+    <addaction name="actionCopy_login_to_clipboard"/>
+    <addaction name="actionCopy_password_to_clipboard"/>
+    <addaction name="actionSearch_in_database"/>
+   </widget>
+   <widget class="QMenu" name="menuAdvanced_functions">
+    <property name="title">
+     <string>Advanced functions</string>
+    </property>
+    <addaction name="actionPassword_genrator"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFiles"/>
+   <addaction name="menuData"/>
+   <addaction name="menuAdvanced_functions"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionCreate_database">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/create.png</normaloff>:/Main_menu_icons/create.png</iconset>
+   </property>
+   <property name="text">
+    <string>Create database</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen_database">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/open.png</normaloff>:/Main_menu_icons/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open database</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave_database">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/save.png</normaloff>:/Main_menu_icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save database</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_database_as">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/save_as.png</normaloff>:/Main_menu_icons/save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save database as</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionClose_database">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/close.png</normaloff>:/Main_menu_icons/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close database</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionChange_master_password">
+   <property name="text">
+    <string>Change master-password</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="actionChange_key_file">
+   <property name="text">
+    <string>Change key file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K</string>
+   </property>
+  </action>
+  <action name="actionBlock_this_window">
+   <property name="text">
+    <string>Block this window</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionSet_master_password_for_blocking">
+   <property name="text">
+    <string>Change master password for blocking</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+B</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/exit.png</normaloff>:/Main_menu_icons/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionAdd_data_to_base">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/plus.png</normaloff>:/Main_menu_icons/plus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add data to base</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl++</string>
+   </property>
+  </action>
+  <action name="actionView_Edit_data_on_base">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/edit.png</normaloff>:/Main_menu_icons/edit.png</iconset>
+   </property>
+   <property name="text">
+    <string>View/Edit data on base</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionDelete_data">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/del.png</normaloff>:/Main_menu_icons/del.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete data</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Backspace</string>
+   </property>
+  </action>
+  <action name="actionCopy_login_to_clipboard">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/copy_login.png</normaloff>:/Main_menu_icons/copy_login.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy login to clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+L</string>
+   </property>
+  </action>
+  <action name="actionCopy_password_to_clipboard">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/copy_password.png</normaloff>:/Main_menu_icons/copy_password.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy password to clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionSearch_in_database">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/find.png</normaloff>:/Main_menu_icons/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>Search in database</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionPassword_genrator">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/generator.png</normaloff>:/Main_menu_icons/generator.png</iconset>
+   </property>
+   <property name="text">
+    <string>Password genrator</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/settings.png</normaloff>:/Main_menu_icons/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="shortcut">
+    <string/>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Main_menu_icons/about.png</normaloff>:/Main_menu_icons/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionChange_master_pwd">
+   <property name="text">
+    <string>Change master-password</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

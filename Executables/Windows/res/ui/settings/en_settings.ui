@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>218</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QCheckBox" name="pwd_v">
+     <property name="text">
+      <string>Enable View Passwords</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Theme:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="theme">
+     <item>
+      <property name="text">
+       <string>Normal</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>cleanlooks</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>motif</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>cde</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>plastique</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>windows</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>windowsxp</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>windowsvista</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>macintosh</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Language:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="lang">
+     <item>
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Russian(Русский)</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="ok">
+     <property name="text">
+      <string>Ok</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="no">
+     <property name="text">
+      <string>No</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
